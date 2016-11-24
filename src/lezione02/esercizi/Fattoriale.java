@@ -6,6 +6,7 @@
 package lezione02.esercizi;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *  Leggo un numero in input e stampo il suo fattoriale
@@ -17,19 +18,22 @@ public class Fattoriale {
     
     public static void main(String[] args) {
         
-        String risultato = "";
-                
-        // crea oggetto scanner per leggere un input dell'utente
-        // è un metodo alternativo al JOptionpane.showInputDialog
-        Scanner s = new Scanner (System.in);
+        // dichiaro le variabili che mi serviranno
+        int numero = 0;
+        int fattoriale = 1;
+        String input;
         
-        System.out.println("Inserisci un numero");  // "println" stampa e va a capo, "print" stampa senza andare a capo
-        //System.out.print("Inserisci un numero ");
+        // chiedo l'input all'utente
+        input = JOptionPane.showInputDialog("Dammi un numero");
+        numero = Integer.parseInt(input);
         
-        // leggo il numero in input
-        int numero = s.nextInt();
+        // faccio la mia elaborazione
+        for (int i=1; i <= numero; i=i+1) {
+            fattoriale = fattoriale * i;
+        }
         
-        
+        // restituisco un output all'utente
+        JOptionPane.showMessageDialog(null, fattoriale);
     }
     
 }
