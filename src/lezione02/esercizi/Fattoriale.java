@@ -5,7 +5,7 @@
  */
 package lezione02.esercizi;
 
-import java.util.Scanner;
+
 import javax.swing.JOptionPane;
 
 /**
@@ -19,7 +19,7 @@ public class Fattoriale {
     public static void main(String[] args) {
         
         // dichiaro le variabili che mi serviranno
-        int numero = 0;
+        int numero;
         int fattoriale = 1;
         String input;
         
