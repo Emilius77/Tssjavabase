@@ -28,7 +28,7 @@ public class Fattoriale {
         numero = Integer.parseInt(input);
         
         // faccio la mia elaborazione
-        for (int i=1; i <= numero; i=i+1) {
+        for (int i=1; i <= numero; i = i+1) {
             fattoriale = fattoriale * i;
         }
         
