@@ -5,6 +5,8 @@
  */
 package lezione05;
 
+import lezione06.ordinamento.Persona;
+
 /**
  *
  * @author tss

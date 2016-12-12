@@ -5,6 +5,7 @@
  */
 package lezione05;
 
+import lezione06.ordinamento.Persona;
 import java.util.Objects;
 
 /**
