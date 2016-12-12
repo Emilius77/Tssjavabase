@@ -3,17 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lezione06.ordinamento;
+package lezione06.generics;
 
+import lezione05.*;
+import lezione06.ordinamento.*;
 import java.util.Date;
 import java.util.Objects;
-
+import java.util.logging.Logger;
 
 /**
  *
  * @author tss
  */
-public class Persona implements Comparable<Persona> {
+public class Persona {
 
     private String nome, cognome;
     private Date dataNascita;
@@ -124,10 +126,5 @@ public class Persona implements Comparable<Persona> {
             return false;
         }
         return true;
-    }
-
-    @Override
-    public int compareTo(Persona o) {
-        return this.cognome.compareTo(o.getCognome());
     }
 }

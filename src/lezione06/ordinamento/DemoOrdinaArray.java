@@ -27,7 +27,7 @@ public class DemoOrdinaArray {
 
         //richiamo il metodo "ordina" passando l'array di persone
         ordina(persone);
-        
+
         //stampo l'array ordinato
         stampa(persone);
     }
@@ -43,30 +43,27 @@ public class DemoOrdinaArray {
 
     /**
      * Ordinamento con bubble sort!
-     * @param persone 
+     *
+     * @param persone
      */
-    
     private static void ordina(Persona[] persone) {
         boolean disordinato;
-        
-        do{
+
+        do {
             disordinato = false;
-            for (int i = 0; i < persone.length -1; i++) {
+            for (int i = 0; i < persone.length - 1; i++) {
                 Persona p = persone[i];
-                Persona pNext = persone[i+1];
+                Persona pNext = persone[i + 1];
                 if (p.compareTo(pNext) >= 0) {
+                    
                     //scambio le posizioni
-                    
                     persone[i] = pNext;
-                    persone[i+1] = p;
-                    
+                    persone[i + 1] = p;
+
                     disordinato = true;
                 }
-                
             }
-            
         } while (disordinato);
-        
 
     }
 }
