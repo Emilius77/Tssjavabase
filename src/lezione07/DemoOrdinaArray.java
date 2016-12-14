@@ -60,4 +60,62 @@ public class DemoOrdinaArray {
    
 
     
+import java.util.Date;
+
+/**
+ *
+ * @author tss
+ */
+public class DemoOrdinaArray {
+
+    public static void main(String[] args) {
+
+        //creo un array di numeri interi (int) dichiarandoli come array di "oggetti numero" (Integer)
+        Integer numeri[] = {3, 300, 75, 2500, 256};
+        
+        //richiamo il metodo "ordina" passando l'array di numeri
+        LibreriaFunzioniArray.ordina(numeri);
+        
+        //stampo l'array
+        LibreriaFunzioniArray.stampa(numeri);
+        
+
+        Persona persone[] = new Persona[3];    //creo un array di 3 persone, della classe Persona
+
+        //istanzio l'array di persone
+        persone[0] = new Persona("Mario", "Rossi");
+        persone[1] = new Persona("Gianni", "Verdi");
+        persone[2] = new Persona("Luca", "Bianchi");
+
+        //stampo l'array
+        LibreriaFunzioniArray.stampa(persone);            //scrivendo in questo modo e dando "alt+invio" gli possiamo dire di creare in automatico il metodo "stampa"
+
+        //richiamo il metodo "ordina" passando l'array di persone
+        LibreriaFunzioniArray.ordina(persone);
+
+        //stampo l'array ordinato
+        LibreriaFunzioniArray.stampa(persone);
+
+        //istanzio l'array Messaggi
+        Messaggio messaggi[] = new Messaggio[3];
+
+        messaggi[0] = new Messaggio("Arrivederci");
+        messaggi[1] = new Messaggio("Buona sera");
+        messaggi[2] = new Messaggio("Buona giornata");
+
+        //richiamo il metodo "ordina" passando l'array di persone
+        LibreriaFunzioniArray.ordina(messaggi);
+
+        //stampo l'array ordinato
+        LibreriaFunzioniArray.stampa(messaggi);
+
+        //cerco un oggetto all'interno dell'array
+        System.out.println(LibreriaFunzioniArray.cerca(persone, new Persona("Luca", "Bianchi")));
+        System.out.println(LibreriaFunzioniArray.cerca(messaggi, new Messaggio("Buona sera")));
+
+        //richiamo la funzione "Data" e stampo la data corrente nel formato specificato nella libreria
+        System.out.println(DateFunction.convert(new Date()));
+
+    }
+
 }
